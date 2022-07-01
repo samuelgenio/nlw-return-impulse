@@ -7,6 +7,10 @@ const app = express()
 app.use(express.json())
 app.use(routes)
 
-app.listen(3333, () => {
-    console.log("aa")
+app.get("/health", (req, res) => {
+    res.status(200).send("it's running!");
+  });
+
+app.listen(process.env.PORT || 3333, () => {
+    console.log("running!")
 })
