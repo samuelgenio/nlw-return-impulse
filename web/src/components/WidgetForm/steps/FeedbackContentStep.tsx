@@ -23,7 +23,7 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequest, onF
     async function handleSubmitFeedback(event: FormEvent) {
         event.preventDefault()
 
-        await api.post('/feedback', {
+        await api.post('/feedbacks', {
             type: feedbackType,
             comment,
             screenshot
