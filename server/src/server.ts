@@ -12,6 +12,6 @@ app.get("/health", (req, res) => {
     res.status(200).send("it's running!");
   });
 
-app.listen(process.env.PORT || 3333, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("running!")
 })
